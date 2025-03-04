@@ -7,6 +7,9 @@ int main(){
     // we can insert data by using make_pair() function  pair<T1, T2> p = make_pair(v1, v2);
     // used to store only one pair it is not a collection of items 
 // it is intigrate in another data struction to get desired data structure
+// Returning multiple values from functions.
+// Storing key-value pairs in other containers, especially maps.
+// Sorting containers on the basis of multiple criteria.
 
 vector<pair<int,string>>vec;
 int roll , n;
