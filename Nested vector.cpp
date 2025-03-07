@@ -11,7 +11,7 @@ int main(){
     cin>>col;
     for(int i=0; i<row; ++i)
     {
-        vector<int>V2
+        vector<int>V2;
         for(int j=0; j<col; ++j)
         {
             cout<<"enter value\n";
