@@ -1,18 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool validbrackets(){
-    stack<string>stk;
-    stk.push("(");
-    stk.push("[");
-    stk.push("{");
-    stk.push("A");
-    stk.push("}");
-    stk.push("S");
-    stk.push("R");
-    stk.push("]");
-    stk.push("kush");
-    stk.push(")");
+bool validbrackets(string s){
+    stack<char>stk;
+
+    for(int i=0; i<s.size();++i)
+    {
+   stk.push(s[i]);
+    } 
+ 
     
     int count1=0,count2=0,count3=0;
     while(!stk.empty()){
@@ -53,12 +49,35 @@ bool validbrackets(){
     if(count1==count2 && count2==count3 && count3==0){
         return true;
     }
-    return false;
+   
+
+    for(int i=0; i<s.size();++i)
+    {
+     if(s[i]=='{' || s[i]=='[' || s[i]=='('){
+      stk.push(s[i]);
+     }
+     else if(s[i]>='a' && s[i]<='z' || s[i]>='A' && s[i]<='Z'){
+      continue;
+     }
+
+    else{
+    while(!stk.empty()){
+      if(stk.top()==s[i]){
+        stk.pop();
+      }
+      else {
+        return false;
+      }
+    }
+}     
+ 
+    }
 }
 
-int main() {
 
-if(validbrackets()){
+int main() {
+ string s="[{()}]" ;
+if(validbrackets(s)){
     cout<<" valid ";
 }
 else{
