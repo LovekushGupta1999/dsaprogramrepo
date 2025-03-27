@@ -3,8 +3,9 @@ using namespace std;
 vector<vector<int>> threesum(vector<int> &nums){
     vector<vector<int>>output;
     set<vector<int>>s;
+    sort(nums.begin(), nums.end());
+    int target=0;
     for(int i=0;i<nums.size();i++){
-        int target=0;
         int j=i+1;
         int k=nums.size()-1;
         while(j<k){
