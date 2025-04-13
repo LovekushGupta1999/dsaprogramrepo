@@ -29,14 +29,12 @@ void Merge(int arr[], int st,int mid ,int end){
 
 
 void Merge_sort(int arr[], int st, int end){
-    if(st>end){
+    if(st<end){
         int mid= (st+end)/2;
         Merge_sort(arr, st, mid);
         Merge_sort(arr, mid+1, end);
         Merge(arr,st,mid,end);
-     for(int i=st; i<=end;++i){
-        cout<<arr[i]<<" ";
-    }
+   
     }
     
     cout<<endl;
